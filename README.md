@@ -1,4 +1,4 @@
-# Alby Hub
+# Alby Hub!
 
 This is a self-sovereign, self-custodial, single-user rewrite of the original [Nostr Wallet Connect](https://github.com/getAlby/nostr-wallet-connect) app. **❗This version is not backwards compatible with the original app - it requires a fresh database and connections to be re-added**
 
