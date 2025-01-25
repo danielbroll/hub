@@ -87,6 +87,7 @@ func NewLDKService(ctx context.Context, cfg config.Config, eventPublisher events
 		"0296b2db342fcf87ea94d981757fdf4d3e545bd5cef4919f58b5d38dfdd73bf5c9", // blocktank
 		"038ba8f67ba8ff5c48764cdd3251c33598d55b203546d08a8f0ec9dcd9f27e3637", // flashsats
 		"0370a5392cd7c81ff5128fa656ee6db0c4d11c778fcd6cb98cb6ba3b48394f5705", // lqwd
+		"03de6bc7ed1badd0827b99c5b1ad2865322815e761572717a536f0a482864c4427", // me
 
 		// Mutinynet
 		lsp.AlbyMutinynetPlebsLSP().Pubkey,
