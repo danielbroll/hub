@@ -9,6 +9,7 @@ import clams from "src/assets/suggested-apps/clams.png";
 import coracle from "src/assets/suggested-apps/coracle.png";
 import damus from "src/assets/suggested-apps/damus.png";
 import hablanews from "src/assets/suggested-apps/habla-news.png";
+import lightningliquid from "src/assets/suggested-apps/lightningliquid.png";
 import lnbits from "src/assets/suggested-apps/lnbits.png";
 import lume from "src/assets/suggested-apps/lume.png";
 import nostrcheckserver from "src/assets/suggested-apps/nostrcheck-server.png";
@@ -61,7 +62,7 @@ export const suggestedApps: SuggestedApp[] = [
     title: "Lightning Liquid",
     description: "Buy bitcoin by bank payment. (1.5% fee & private)",
     webLink: "https://lightningliquid.com/stacking",
-    //logo: todo,
+    logo: lightningliquid,
     extendedDescription:
       "Stack sats trough lightning into your liquid wallet.",
     guide: (
