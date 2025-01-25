@@ -57,6 +57,46 @@ export type SuggestedApp = {
 
 export const suggestedApps: SuggestedApp[] = [
   {
+    id: "lightningliquid",
+    title: "Lightning Liquid",
+    description: "Buy bitcoin by bank payment. (1.5% fee & private)",
+    webLink: "https://lightningliquid.com/stacking",
+    //logo: todo,
+    extendedDescription:
+      "Stack sats trough lightning into your liquid wallet.",
+    guide: (
+      <>
+        <div>
+          <ul className="list-inside text-muted-foreground">
+            <li>
+              1. Enter the {" "}
+              <span className="font-medium text-foreground">EUR/CHF amount & frequency</span> you would like to exchange.
+            </li>
+            <li>
+              2. Enter your{" "}
+              <span className="font-medium text-foreground">IBAN</span>{" "}
+              from where you will send the money.
+            </li>
+            <li>
+              3. Connect your {" "}
+              <span className="font-medium text-foreground">
+                Alby Hub
+              </span>{" "}
+              to automatically receive your purchased bitcoin.
+            </li>
+            <li>
+              4. Set up the bank payment in your {" "}
+              <span className="font-medium text-foreground">
+                Online Banking
+              </span>{" "}
+              and wait for the money to arrive. You will get a email confirmation once the money arrives.
+            </li>
+          </ul>
+        </div>
+      </>
+    ),
+  },
+  {
     id: "uncle-jim",
     title: "Friends & Family",
     description: "Sub-wallets powered by your Hub",
