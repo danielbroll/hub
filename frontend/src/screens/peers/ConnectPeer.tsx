@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import AppHeader from "src/components/AppHeader";
 import { Input } from "src/components/ui/input";
 import { Label } from "src/components/ui/label";
@@ -11,9 +11,14 @@ import { ConnectPeerRequest } from "src/types";
 import { request } from "src/utils/request";
 
 export default function ConnectPeer() {
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
   const { toast } = useToast();
   const [isLoading, setLoading] = React.useState(false);
-  const [connectionString, setConnectionString] = React.useState("");
+  const [connectionString, setConnectionString] = React.useState(
+    queryParams.get("c") ?? ""
+  );
+  const [alias] = React.useState(queryParams.get("alias") ?? "");
   const navigate = useNavigate();
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -60,8 +65,10 @@ export default function ConnectPeer() {
   return (
     <div className="grid gap-5">
       <AppHeader
-        title="Connect Peer"
-        description="Manually connect to a lightning network peer"
+        title={alias ? `Connect to ${alias}` : "Connect Peer"}
+        description={
+          alias ? "" : "Manually connect to a lightning network peer"
+        }
       />
       <div className="max-w-lg">
         <form onSubmit={handleSubmit}>
